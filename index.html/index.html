@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Super Mario</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./js/script.js" defer></script>
+    <link rel="shortcut icon" href="../imags/pipe.png" type="image/x-icon">
+</head>
+<body>
+    
+    <main class="cenario">
+
+        <header class="header">
+            <div class="topo">
+                <div class="coluna">
+                    <span class="titulo">Jogador</span>
+                    <span class="texto1" id="txtNomeJogador">Nome Jogador</span>
+                </div>
+                <img src="../imags/logo.webp" class="logo">
+
+                <div class="placar">
+                    <div class="coluna">
+                        <span class="titulo">Pontos</span>
+                        <span class="texto2" id="txtPontos">00</span>
+                    </div>
+                    <div class="coluna">
+                        <span class="titulo">Tempo</span>
+                        <span class="texto3" id="txtTempo">00</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-board start">
+            <img src="../imags/mario-agachado.png" class="mario-agachado">
+            <img src="../imags/bala.png" class="bala">
+            <img src="../imags/clouds.png" class="clouds2">
+            <img src="../imags/clouds.png" class="clouds">
+            <img src="../imags/mario.gif" class="mario">
+            <img src="../imags/pipe.png" class="tubo">
+        </div>
+
+        <section class="sleep ">
+            <div class="contagem">5</div>
+
+            <div class="regras-jogo">
+                <div class="bloco-regra">
+                    <img src="../imags/mario-parado.png" class="img-regra">
+                    <span>Use a tecla <span style="color: #E62319;">Arrow Up</span> para pular!</span>
+                </div>
+                <div class="bloco-regra">
+                    <img src="../imags/mario-agachado.png" class="img-regra">
+                    <span>Use a tecla <span style="color: #FCCF2F;">Arrow Down</span> para agachar!</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <section class="modal active">
+        <section class="modal-login">
+            <h1 class="titulo2">
+                <p style="color: #199BD9;">Pronto</p>
+                <p style="color: #FCCF2F;">para</p>
+                <p style="color: #E62319;">um</p>
+                <p style="color: #44AF35;">novo</p>
+                <p style="color: #199BD9;">desafio?</p>
+            </h1>
+            <input type="text" class="input-jogador" id="inputJogador" placeholder="jogador..." onfocus="true">
+
+            <button class="btn-modal btn-start btn-red-tr" id="btnStart">Iniciar Jogo!</button>
+
+            <p class="regra"> Use as ateclas Arrow UP e Arrow Down</p>
+
+            <img src="../imags/super-mario.webp" class="super-mario">
+
+        </section>
+
+        <section class="modal-game-over">
+            <h1 class="titulo3">
+                <p style="color: #E62319;">Que</p>
+                <p style="color: #FCCF2F;">pena,</p>
+                <p style="color: #44AF35">voce</p>
+                <p style="color: #E62319;">perdeu!</p>
+            </h1>
+            <img src="../imags/game-over-escrita.png" class="img-game-over" alt="img-game-over">
+
+            <div class="wrapper-btn">
+                <button class="btn-modal btn-red-tr btn-reiniciar">Reiniciar</button>
+            </div>
+        </section>
+    </section>
+
+</body>
+</html>

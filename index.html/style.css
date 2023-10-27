@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'mario';
+}
+
+    @font-face {
+        font-family: 'mario';
+        src: url('../font/SuperMario256.ttf');
+    }
+
+.cenario {
+    width: 100%;
+    height: 100vh;
+    border-bottom: 25px solid rgb(0, 167, 0);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#199BD9, #E0F6FF); 
+}
+
+.cenario.start .tubo {
+    
+}
+.cenario.start .bala {
+    
+}
+.cenario.start .clouds {
+    
+}
+.cenario.start .clouds2 {
+    
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sleep{
+    width: 100%;
+    height: 100vh;
+    display: none;
+
+  /*  &.active{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        animation: fade-up .5s forwards;
+    } */
+}
+
+.topo {
+    width: 750px;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: white;
+    border: solid 4px #199BD9;
+    box-shadow: 3px 3px #FCCF2F, 1px 0 0.4em rgb(6, 6, 6);
+    opacity: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    position: relative;
+}
+
+.coluna {
+    display: block;
+    text-align: center;
+}
+
+.titulo {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #199BD9;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 180px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.placar {
+    display: flex;
+    gap: 10px;
+}
+
+.texto1 {
+    color: #FCCF2F;
+}
+
+.texto2 {
+    color: #E62319;
+}
+
+.texto3 {
+    color: #44AF35;
+}
+
+.tubo {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    right: -100px;
+    animation: tubo-animation 2s infinite linear;
+}
+
+.bala {
+    position: absolute;   
+    bottom: 60px;
+    width: 100px;
+    right: -120px;
+     animation: bala-animation 2s infinite linear 1s;
+}
+
+.mario {
+    width: 140px;
+    position: absolute;
+    bottom: 0;
+}
+
+.mario-agachado {
+    width: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 500px;
+}
+
+
+.clouds {
+    width: 160px;
+    right: -160px;
+    top: 200px;
+    position: absolute;
+    animation: clouds-animation 15s infinite linear;
+}
+
+.clouds2 {
+    width: 140px;
+    right: -140px;
+    top: 200px;
+    position: absolute;
+    animation: clouds2-animation 15s infinite linear 9s;
+}
+
+
+.jump {
+    animation: jump 500ms ease-out;
+}
+
+.habilitar {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .90);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal-login {
+    width: 650px;
+    height: 500px;
+    background-image: url(../imags/Background-Super-Mario.png);
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 2px 2px 20px #FCCF2F;
+    border-radius: 25px;
+    padding: 50px;
+    display: none;
+    position: relative;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fade-up 5s forwards;
+}
+
+.super-mario {
+    width: 170px;
+    position: absolute;
+    left: -90px;
+}
+
+.titulo2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    -webkit-text-stroke: 3px #000;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+    gap: 10px;
+}
+
+.input-jogador {
+    width: 300px;
+    height: 50px;
+    border: solid 3px #199BD9;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 18px;
+    outline: none;
+}
+
+.btn-modal {
+    background: none;
+    border: none;
+    width: 240px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: flex-end;
+    text-transform: uppercase;
+    padding: 15px;
+    margin: 30px 0px;
+    background-color: #E62319;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    transition: 4s;
+}
+
+.btn-red-tr:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 20px #FCCF2F;
+    transition: 1s;
+}
+
+.regra {
+    text-align: center;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, .70);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.modal-game-over {
+    width: 650px;
+    height: 500px;
+    background-image: linear-gradient(#199BD9, rgb(231, 231, 231));
+    box-shadow: 2px 2px 20px #E62319;
+    padding: 50px;
+    border-radius: 30px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo3 {
+    font-size: 34px;
+    text-align: center;
+    -webkit-text-stroke: 3px #000;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.img-game-over {
+    width: 400px;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+@keyframes clouds2-animation {
+    from {
+        right: -150px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -180px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    70% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes tubo-animation {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes bala-animation {
+    from {
+        right: -100px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes fade-up {
+    from {
+        transform: translate(0px -200px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px 0px);
+        opacity: 1;
+    }
+}
