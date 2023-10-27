@@ -19,8 +19,7 @@
     overflow: hidden;
     background: linear-gradient(#199BD9, #E0F6FF); 
 }
-
-.cenario.start .tubo {
+/*.cenario.start .tubo {
     
 }
 .cenario.start .bala {
@@ -37,7 +36,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-}
+} */
 
 .sleep{
     width: 100%;
